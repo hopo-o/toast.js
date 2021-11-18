@@ -1,0 +1,16 @@
+div(class='toast class-name-just-for-unique')
+  i(class='toast-icon')
+    case type
+      when 'info'
+        include ./icon-info.pug
+      when 'success'
+        include ./icon-success.pug
+      when 'error'
+        include ./icon-error.pug
+      when 'warning'
+        include ./icon-warning.pug
+      when 'loading'
+        include ./icon-loading.pug
+      default
+        include ./icon-info.pug
+  div(class='toast-text')= message

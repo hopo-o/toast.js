@@ -1,11 +1,12 @@
 {
-  "name": "toast",
+  "name": "@hopo/toast.js",
   "version": "1.0.0",
   "description": "A light-weight toast for mobile web page",
   "main": "lib/index.js",
+  "files": ["lib"],
   "scripts": {
     "build": "rollup -c",
-    "dev": "rollup -c -w",
+    "dev": "rollup -w -c ./rollup.config.dev.js",
     "test": "npx http-server ."
   },
   "repository": {
@@ -16,7 +17,7 @@
     "toast",
     "mobile"
   ],
-  "author": "",
+  "author": "hopo",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/hopo-o/toast.js/issues"
@@ -24,7 +25,12 @@
   "homepage": "https://github.com/hopo-o/toast.js#readme",
   "devDependencies": {
     "@rollup/plugin-typescript": "^8.3.0",
+    "node-sass": "^6.0.1",
+    "postcss": "^8.3.11",
     "rollup": "^2.58.1",
+    "rollup-plugin-postcss": "^4.0.1",
+    "rollup-plugin-pug": "^1.1.1",
+    "rollup-plugin-serve": "^1.1.0",
     "tslib": "^2.3.1",
     "typescript": "^4.4.4"
   }

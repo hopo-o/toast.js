@@ -1,5 +1,6 @@
-import typescript from '@rollup/plugin-typescript';
+import serve from 'rollup-plugin-serve'
 import postcss from 'rollup-plugin-postcss';
+import typescript from '@rollup/plugin-typescript';
 import pug from 'rollup-plugin-pug';
 
 export default {
@@ -9,7 +10,8 @@ export default {
     format: 'es',
     sourcemap: true
   },
-	plugins: [
+  plugins: [
+    serve(),
 		postcss({
       plugins: []
 		}),
@@ -17,4 +19,5 @@ export default {
 		typescript()
 	]
 };
+
 
